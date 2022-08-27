@@ -1,0 +1,8 @@
+https://docs.nestjs.com/pipes
+
+db name
+task-mangment
+
+stop this
+arning: in the working copy of '.eslintrc.js', LF will be replaced by CRLF the next time Git touches it
+https://stackoverflow.com/questions/5834014/lf-will-be-replaced-by-crlf-in-git-what-is-that-and-is-it-important
