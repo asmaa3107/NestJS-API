@@ -1,11 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { v4 as uuid } from 'uuid';
 import { CreateTaskeDto } from './dtos/create-task-dto';
 import { GetTasksFiltterDto } from './dtos/get-task-filters.dto';
-import { Task, TaskStatus } from './task-status.enum';
+import { TaskStatus } from './task-status.enum';
+import { Tasksrepository } from './tasks.repository';
 
 @Injectable()
 export class TasksService {
+  constructor(private tasksRepository: Tasksrepository) {}
   // getAllTasks(): Task[] {
   //   return this.tasks;
   // }
