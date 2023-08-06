@@ -3,13 +3,15 @@ import { CreateTaskeDto } from './dtos/create-task-dto';
 import { GetTasksFiltterDto } from './dtos/get-task-filters.dto';
 import { TaskStatus } from './task-status.enum';
 import { Tasksrepository } from './tasks.repository';
+import { Task } from './tasks.entity';
 
 @Injectable()
 export class TasksService {
   constructor(private tasksRepository: Tasksrepository) {}
-  // getAllTasks(): Task[] {
-  //   return this.tasks;
-  // }
+  tasks = [];
+  getAllTasks(): Task[] {
+    return this.tasks;
+  }
   // getTasksWithFilters(filterDto: GetTasksFiltterDto): Task[] {
   //   const { status, search } = filterDto;
   //   let tasks = this.getAllTasks();

@@ -12,9 +12,15 @@ import { CreateTaskeDto } from './dtos/create-task-dto';
 import { GetTasksFiltterDto } from './dtos/get-task-filters.dto';
 import { TaskStatus } from './task-status.enum';
 import { TasksService } from './tasks.service';
+import { Task } from './tasks.entity';
 @Controller('tasks')
 export class TasksController {
   constructor(private taskService: TasksService) {}
+
+  @Get()
+  getAllTasks(): Task[] {
+    return this.taskService.getAllTasks();
+  }
 
   // @Get()
   // getTasks(@Query() filterDto: GetTasksFiltterDto): Task[] {
