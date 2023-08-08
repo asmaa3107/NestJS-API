@@ -33,21 +33,27 @@ export class TasksController {
   //   }
   // }
 
-  // @Get('/:id')
-  // getTaskById(@Param('id') id: string): Task {
-  //   //send id after '/'
-  //   return this.taskService.getTaskById(id);
-  // }
+  @Get('/:id')
+  getTaskById(@Param('id') id: string): Task {
+    //send id after '/'
+    return this.taskService.getTaskById(id);
+  }
   // @Delete('/:id')
   // deleteTaskById(@Param('id') id: string): void {
   //   this.taskService.deleteTaskById(id);
   // }
 
-  // @Post()
-  // createTaskRequest(@Body() createtaskTod: CreateTaskeDto): Task {
-  //   return this.taskService.createTask(createtaskTod);
+  @Post()
+  createTaskRequest(@Body() createtaskTod: CreateTaskeDto): Task {
+    return this.taskService.createTask(createtaskTod);
+  }
+  // @Post ()
+  // createTask(
+  // @Body('title') title: string,
+  // @Body('description') description: string,
+  // ): Task {
+  // return this.taskService.createTask(title, description);
   // }
-
   // @Patch('/:id/status')
   // updateTask(
   //   @Param('id') id: string,
@@ -56,6 +62,3 @@ export class TasksController {
   //   return this.taskService.updateTask(id, status);
   // }
 }
-// getAllTasks(): Task[] {
-//   return this.taskService.getAllTasks();
-// }
